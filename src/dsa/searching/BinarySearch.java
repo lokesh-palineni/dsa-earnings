@@ -20,12 +20,31 @@ public class BinarySearch {
 		return -1;
 		 
 	}
+	static int recursive(int []a,int low,int high,int x) {
+		 if(low> high)
+			 return -1; 
+		int mid=low+high/2;
+		if(a[mid]==x)
+			return mid;
+		else if(a[mid]<x) {
+			return recursive(a,mid+1,high,x);
+		}
+		else {
+			return recursive(a,low,mid-1,x);
+		}
+		
+		 }
+		 
+		
+	
 	public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter size");
 		int n=sc.nextInt();
 		int a[]=new int[n];
+		System.out.println("enter elements");
+		
 		for(int i=0;i<n;i++) {
 			a[i]=sc.nextInt();
 		}
