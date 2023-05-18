@@ -1,4 +1,4 @@
-package dsa.multidimensional;
+package dsa.matrix;
 
 public class BoudryTrav {
 

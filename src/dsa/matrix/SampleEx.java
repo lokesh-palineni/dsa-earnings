@@ -1,4 +1,4 @@
-package dsa.multidimensional;
+package dsa.matrix;
 import java.util.Scanner;
 
 public class SampleEx {
