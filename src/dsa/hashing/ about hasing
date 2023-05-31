@@ -1,0 +1,18 @@
+hashing
+--------
+hashing is best for this
+search \
+insert--- O(1) an avg
+delete /
+
+hashing is not useful for
+------------------------
+finding closest value
+sort the data
+prefix searching
+
+array drawbacks
+----------
+it does not handle large values
+if it contain float values 
+it it contain strings  that r not taken as index values
