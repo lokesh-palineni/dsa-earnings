@@ -1,7 +1,7 @@
 package dsa.linkedlist;
 
 public class DoubleLinkedLIstEx {
-	Node head;
+	static Node head;
 
 	class Node {
 		int data;
@@ -9,7 +9,7 @@ public class DoubleLinkedLIstEx {
 		Node next;
 
 		public Node(int data) {
-			data = data;
+			this.data = data;
 		}
 	}
 
@@ -39,7 +39,45 @@ public class DoubleLinkedLIstEx {
 		}
 	}
 
+	void reverse() {
+		if (head == null || head.next == null)
+			return;
+		Node prev = null;
+		Node next;
+		Node temp = head;
+		while (temp != null) {
+			prev = temp.prev;
+			temp.prev = temp.next;
+			temp.next = prev;
+			temp = temp.prev;
+
+		}
+		head = prev.prev;
+		// System.out.println(head.data);
+	}
+
+	void print() {
+		Node temp = head;
+		while (temp != null) {
+			System.out.print(temp.data + ",");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+
 	public static void main(String[] args) {
+		DoubleLinkedLIstEx dl = new DoubleLinkedLIstEx();
+		dl.insertAtBeg(8);
+		dl.insertAtBeg(7);
+		dl.insertAtBeg(6);
+		dl.insertAtBeg(5);
+		dl.insertAtBeg(4);
+		dl.insertAtEnd(9);
+		dl.insertAtEnd(10);
+		dl.insertAtEnd(19);
+		dl.print();
+		dl.reverse();
+		dl.print();
 
 	}
 
