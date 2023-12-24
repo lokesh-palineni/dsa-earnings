@@ -1,7 +1,7 @@
 package dsa.linkedlist;
 
 public class LinkedListEx {
-	Node head;
+	static Node head;
 
 	class Node {
 		int data;
@@ -116,6 +116,16 @@ public class LinkedListEx {
 		}
 	}
 
+	void recursive(Node node) {
+		if (node == null) {
+			return;
+		}
+
+		System.out.println(node.data);
+		recursive(node.next);
+
+	}
+
 	public static void main(String[] args) {
 
 		LinkedListEx ll = new LinkedListEx();
@@ -130,6 +140,7 @@ public class LinkedListEx {
 		ll.deleteAtLast();
 		ll.deleteAtFirst();
 		ll.deleteAtIndex(3);
+		ll.recursive(head);
 		ll.printList();
 
 	}
