@@ -12,12 +12,12 @@ public class GraphEx {
 			adj.add(new ArrayList<Integer>());
 		}
 
-		addEdge(adj, 0, 1);
-		addEdge(adj, 0, 2);
-		addEdge(adj, 1, 2);
-		addEdge(adj, 1, 3);
-
-		PrintGraphics(adj);
+		addEdge(adj, 0, 1);          // representation
+		addEdge(adj, 0, 2);           //  0 -> 1  2           0
+		addEdge(adj, 1, 2);           //  1 -> 0  2  3        | \        
+		addEdge(adj, 1, 3);           //  2 -> 0  1           |  1-----3    graph
+                                      //  3 -> 1              | /    
+		PrintGraphics(adj);           //                      2
 	}
 
 	static void PrintGraphics(ArrayList<ArrayList<Integer>> adj) {
